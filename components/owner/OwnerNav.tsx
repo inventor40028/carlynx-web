@@ -1,36 +1,57 @@
-// Owner dashboard navigation
+// Owner dashboard navigation.
+// Desktop (xl+): inline link row with room to breathe.
+// Mobile / tablet: collapsed behind a hamburger; tapping opens a vertical link panel.
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { X } from 'lucide-react';
 import { clearSession } from '@/lib/session';
+import HamburgerIcon from '@/components/ui/HamburgerIcon';
+
+const LINKS = [
+  { label: 'Dashboard', href: '/owner/dashboard' },
+  { label: 'Add Vehicle', href: '/owner/add-vehicle' },
+  { label: 'Drivers', href: '/owner/drivers' },
+  { label: 'Performance', href: '/owner/performance' },
+  { label: 'Onboarding', href: '/owner/onboarding' },
+  { label: 'Inspection', href: '/shared/inspection' },
+  { label: 'Subscriptions', href: '/subscriptions' },
+  { label: 'Maintenance', href: '/shared/maintenance' },
+  { label: 'Payments', href: '/shared/payments' },
+  { label: 'Emergency', href: '/shared/emergency' },
+];
 
 export default function OwnerNav() {
   const router = useRouter();
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
-  const links = [
-    { label: 'Dashboard', href: '/owner/dashboard' },
-    { label: 'Add Vehicle', href: '/owner/add-vehicle' },
-    { label: 'Drivers', href: '/owner/drivers' },
-    { label: 'Performance', href: '/owner/performance' },
-    { label: 'Onboarding', href: '/owner/onboarding' },
-    { label: 'Inspection', href: '/shared/inspection' },
-    { label: 'Subscriptions', href: '/subscriptions' },
-    { label: 'Maintenance', href: '/shared/maintenance' },
-    { label: 'Payments', href: '/shared/payments' },
-    { label: 'Emergency', href: '/shared/emergency' },
-  ];
+  // Close the menu whenever the user navigates to a new page.
+  useEffect(() => { setOpen(false); }, [pathname]);
+
+  // ESC closes the menu on all viewports.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
 
   const handleLogout = () => {
     clearSession();
     router.push('/');
   };
 
+  const isActive = (href: string) => pathname === href;
+
   return (
-    <nav className="bg-[#0d1b2e] text-white">
+    <nav className="bg-[#0d1b2e] text-white relative">
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center">
+          {/* Brand */}
           <Link href="/owner/dashboard" className="flex items-center gap-3">
             <Image
               src="/logo-white.png"
@@ -41,29 +62,87 @@ export default function OwnerNav() {
             />
             <span className="text-xl font-bold">CarLynk</span>
           </Link>
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-[#e8c96a] hidden sm:inline">Owner Dashboard</span>
+
+          {/* Desktop inline links — only at xl+ where there's room */}
+          <div className="hidden xl:flex items-center gap-x-5 text-sm">
+            {LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-colors ${
+                  isActive(link.href) ? 'text-[#e8c96a] font-semibold' : 'hover:text-[#e8c96a]'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Right cluster: dashboard label + logout (desktop) OR hamburger (mobile) */}
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-[#e8c96a] hidden xl:inline">Owner Dashboard</span>
             <button
               type="button"
               onClick={handleLogout}
-              className="text-sm hover:text-[#e8c96a] transition-colors"
+              className="hidden xl:inline text-sm hover:text-[#e8c96a] transition-colors"
             >
               Logout
             </button>
+
+            {/* Hamburger — visible only below xl */}
+            <button
+              type="button"
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+              className="xl:hidden inline-flex items-center justify-center w-10 h-10 hover:text-[#e8c96a] transition-colors"
+            >
+              {open ? <X size={22} /> : <HamburgerIcon size={26} />}
+            </button>
           </div>
         </div>
-        <div className="flex gap-x-6 gap-y-2 text-sm flex-wrap">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="hover:text-[#e8c96a] transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
       </div>
+
+      {/* Mobile / tablet panel — slides down under the bar */}
+      {open && (
+        <>
+          {/* Click-outside backdrop */}
+          <button
+            type="button"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+            className="xl:hidden fixed inset-0 z-30 bg-black/40"
+          />
+          <div className="xl:hidden absolute top-full inset-x-0 z-40 bg-[#0d1b2e] border-t border-white/10 shadow-xl">
+            <div className="max-w-7xl mx-auto px-6 py-4">
+              <div className="text-xs uppercase tracking-widest text-[#e8c96a] font-semibold mb-3">
+                Owner Dashboard
+              </div>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+                {LINKS.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`block py-3 border-b border-white/10 transition-colors ${
+                        isActive(link.href) ? 'text-[#e8c96a] font-semibold' : 'hover:text-[#e8c96a]'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <button
+                type="button"
+                onClick={handleLogout}
+                className="mt-4 w-full sm:w-auto px-5 py-2.5 bg-[#e8c96a] text-[#0d1b2e] font-semibold rounded-full hover:bg-[#d4b556] transition-colors"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </>
+      )}
     </nav>
   );
 }
