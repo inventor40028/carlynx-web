@@ -11,6 +11,7 @@ import Footer from '@/components/ui/Footer';
 import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 import ImageUpload from '@/components/ui/ImageUpload';
+import SectionBackground from '@/components/ui/SectionBackground';
 
 export default function DriverSignUp() {
   const router = useRouter();
@@ -63,7 +64,15 @@ export default function DriverSignUp() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1 flex items-center justify-center py-12 px-6 bg-[#eef3f8]">
+      {/* Photo of a driver checking the CarLynk app — anchored to keep his face visible.
+          A 60% navy overlay lets the photo set the mood while the form stays foreground. */}
+      <SectionBackground
+        src="/images/drivermatch.png"
+        alt="A CarLynk driver checking opportunities on his phone"
+        variant="form"
+        position="center 30%"
+        className="flex-1 flex items-center justify-center py-12 px-6"
+      >
         <div className="w-full max-w-2xl bg-white border border-[#cfd6e3] p-8 rounded-xl shadow-lg fade-in-up">
           {/* Progress Indicator */}
           <div className="mb-8">
@@ -272,7 +281,7 @@ export default function DriverSignUp() {
             </p>
           </div>
         </div>
-      </main>
+      </SectionBackground>
       <Footer />
     </div>
   );

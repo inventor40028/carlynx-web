@@ -8,6 +8,7 @@ import {
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
 import Button from '@/components/ui/Button';
+import SectionBackground from '@/components/ui/SectionBackground';
 
 export default function Home() {
   return (
@@ -52,15 +53,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* User Types Section */}
-      <section className="py-16 px-6 bg-white">
+      {/* User Types Section — photo of an owner+driver handshake fades behind the cards */}
+      <SectionBackground
+        src="/images/herosecbel.png"
+        alt="Car owner and CarLynk driver shaking hands in Accra"
+        variant="soft"
+        // Anchor a touch above center so the handshake stays visible on tall viewports
+        position="center 35%"
+        className="py-20 px-6"
+      >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#0d1b2e] text-center mb-12 fade-in-up">
-            Choose Your Path
-          </h2>
+          <div className="text-center mb-10 fade-in-up">
+            <div className="text-[#e8c96a] font-bold text-sm tracking-widest mb-3">
+              JOIN THE NETWORK
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">Choose Your Path</h2>
+            <p className="text-gray-300 mt-3 max-w-2xl mx-auto">
+              Whether you own a vehicle or drive professionally — CarLynk connects you with verified partners.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Car Owner Card */}
-            <div className="border-t-4 border-t-[#0f766e] border border-[#cfd6e3] p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow fade-in-up">
+            <div className="bg-white border-t-4 border-t-[#0f766e] border border-[#cfd6e3] p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow fade-in-up">
               <h3 className="text-2xl font-bold text-[#0d1b2e] mb-4">
                 I Own A Car
               </h3>
@@ -94,7 +108,7 @@ export default function Home() {
             </div>
 
             {/* Driver Card */}
-            <div className="border-t-4 border-t-[#1d4ed8] border border-[#cfd6e3] p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow fade-in-up">
+            <div className="bg-white border-t-4 border-t-[#1d4ed8] border border-[#cfd6e3] p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow fade-in-up">
               <h3 className="text-2xl font-bold text-[#0d1b2e] mb-4">
                 I Need A Car
               </h3>
@@ -128,16 +142,28 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </SectionBackground>
 
-      {/* Features Section */}
-      <section className="py-16 px-6 bg-[#eef3f8]">
+      {/* Features Section — buildtrust photo behind, gradient fades for legibility */}
+      <SectionBackground
+        src="/images/buildtrust.png"
+        alt="CarLynk driver checking the platform on his phone"
+        variant="soft"
+        position="center 30%"
+        className="py-20 px-6"
+      >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#0d1b2e] text-center mb-12 fade-in-up">
-            Trust & Security Built In
-          </h2>
+          <div className="text-center mb-10 fade-in-up">
+            <div className="text-[#e8c96a] font-bold text-sm tracking-widest mb-3">
+              BUILT FOR TRUST
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">Trust &amp; Security Built In</h2>
+            <p className="text-gray-300 mt-3 max-w-2xl mx-auto">
+              Every partnership starts with verification, formal contracts, and protected payments.
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white border border-[#cfd6e3] p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up">
+            <div className="bg-white border border-[#cfd6e3] p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow fade-in-up">
               <div className="text-[#e8c96a] mb-4">
                 <Shield size={48} strokeWidth={2} />
               </div>
@@ -148,7 +174,7 @@ export default function Home() {
                 KYC verification for all users. Only verified drivers and owners can partner.
               </p>
             </div>
-            <div className="bg-white border border-[#cfd6e3] p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up">
+            <div className="bg-white border border-[#cfd6e3] p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow fade-in-up">
               <div className="text-[#e8c96a] mb-4">
                 <FileText size={48} strokeWidth={2} />
               </div>
@@ -159,7 +185,7 @@ export default function Home() {
                 Clear terms, digital signatures, and complete contract history.
               </p>
             </div>
-            <div className="bg-white border border-[#cfd6e3] p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow fade-in-up">
+            <div className="bg-white border border-[#cfd6e3] p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow fade-in-up">
               <div className="text-[#e8c96a] mb-4">
                 <DollarSign size={48} strokeWidth={2} />
               </div>
@@ -172,7 +198,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </SectionBackground>
 
       {/* Get to know us — links into About / Careers / Contacts / Customer Service / Book */}
       <section className="py-16 px-6 bg-white">

@@ -57,6 +57,44 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Fleet banner — aerial mockup directly beneath the About hero.
+          Fixed-height landscape banner so the parking-lot composition reads on every viewport.
+          Subtle dark fade at top/bottom blends it into the page rhythm. */}
+      <section
+        className="relative isolate overflow-hidden h-[260px] sm:h-[340px] lg:h-[420px] -mt-px"
+        aria-label="CarLynk fleet at the Accra hub"
+      >
+        <Image
+          src="/images/dashboardmockup.jpg"
+          alt="Aerial view of the CarLynk fleet parked at the Accra hub"
+          fill
+          sizes="100vw"
+          className="object-cover -z-20 select-none pointer-events-none"
+          style={{ objectPosition: 'center 55%' }}
+          priority
+        />
+        {/* Top + bottom navy fade so the banner stitches into the surrounding sections */}
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(13,27,46,0.85) 0%, rgba(13,27,46,0.20) 25%, rgba(13,27,46,0.20) 75%, rgba(13,27,46,0.92) 100%)',
+          }}
+        />
+        {/* Caption — minimal, premium */}
+        <div className="relative z-10 h-full flex items-end">
+          <div className="max-w-6xl mx-auto w-full px-6 pb-6 sm:pb-8 fade-in-up">
+            <div className="text-[#e8c96a] font-bold text-xs sm:text-sm tracking-widest mb-1">
+              AT A GLANCE
+            </div>
+            <p className="text-white font-semibold text-lg sm:text-xl max-w-xl">
+              A growing fleet of verified vehicles — managed under one platform.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <main className="flex-1 py-14 px-6">
         <div className="max-w-6xl mx-auto space-y-14">
           {/* Mission / Vision / Aim */}

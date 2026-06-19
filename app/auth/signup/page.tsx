@@ -9,6 +9,7 @@ import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
 import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
+import SectionBackground from '@/components/ui/SectionBackground';
 
 function SignUpForm() {
   const router = useRouter();
@@ -42,8 +43,16 @@ function SignUpForm() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1 flex items-center justify-center py-12 px-6 bg-[#eef3f8]">
-        <div className="w-full max-w-md bg-white border border-[#cfd6e3] p-8">
+      {/* Photo of a car owner standing by his Mercedes — anchored to keep the subject visible.
+          The 60% navy plate keeps it as a backdrop while the white form card pops on top. */}
+      <SectionBackground
+        src="/images/vowner.png"
+        alt="A CarLynk car owner standing by his vehicle in Accra"
+        variant="form"
+        position="center 30%"
+        className="flex-1 flex items-center justify-center py-12 px-6"
+      >
+        <div className="w-full max-w-md bg-white border border-[#cfd6e3] p-8 rounded-xl shadow-2xl">
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
               <Image
@@ -125,7 +134,7 @@ function SignUpForm() {
             </p>
           </div>
         </div>
-      </main>
+      </SectionBackground>
       <Footer />
     </div>
   );
