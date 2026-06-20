@@ -10,6 +10,7 @@ import Footer from '@/components/ui/Footer';
 import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 import SectionBackground from '@/components/ui/SectionBackground';
+import FormDeliveryFrame from '@/components/ui/FormDeliveryFrame';
 
 function SignUpForm() {
   const router = useRouter();
@@ -52,7 +53,8 @@ function SignUpForm() {
         position="center 30%"
         className="flex-1 flex items-center justify-center py-12 px-6"
       >
-        <div className="w-full max-w-md bg-white border border-[#cfd6e3] p-8 rounded-xl shadow-2xl">
+        <FormDeliveryFrame className="w-full max-w-md">
+          <div className="w-full bg-white border border-[#cfd6e3] p-8 rounded-xl shadow-2xl">
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
               <Image
@@ -133,7 +135,8 @@ function SignUpForm() {
               </Link>
             </p>
           </div>
-        </div>
+          </div>
+        </FormDeliveryFrame>
       </SectionBackground>
       <Footer />
     </div>

@@ -12,6 +12,7 @@ import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
 import ImageUpload from '@/components/ui/ImageUpload';
 import SectionBackground from '@/components/ui/SectionBackground';
+import FormDeliveryFrame from '@/components/ui/FormDeliveryFrame';
 
 export default function DriverSignUp() {
   const router = useRouter();
@@ -73,7 +74,8 @@ export default function DriverSignUp() {
         position="center 30%"
         className="flex-1 flex items-center justify-center py-12 px-6"
       >
-        <div className="w-full max-w-2xl bg-white border border-[#cfd6e3] p-8 rounded-xl shadow-lg fade-in-up">
+        <FormDeliveryFrame className="w-full max-w-2xl">
+          <div className="w-full bg-white border border-[#cfd6e3] p-8 rounded-xl shadow-lg fade-in-up">
           {/* Progress Indicator */}
           <div className="mb-8">
             <div className="flex justify-between items-center mb-4">
@@ -280,7 +282,8 @@ export default function DriverSignUp() {
               </Link>
             </p>
           </div>
-        </div>
+          </div>
+        </FormDeliveryFrame>
       </SectionBackground>
       <Footer />
     </div>

@@ -9,6 +9,7 @@ import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
 import Button from '@/components/ui/Button';
 import SectionBackground from '@/components/ui/SectionBackground';
+import CarDriveStrip from '@/components/ui/CarDriveStrip';
 
 export default function Home() {
   return (
@@ -52,6 +53,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Animation strip between hero and Choose Your Path — car drives in, parks, tires keep spinning */}
+      <CarDriveStrip />
 
       {/* User Types Section — photo of an owner+driver handshake fades behind the cards */}
       <SectionBackground
