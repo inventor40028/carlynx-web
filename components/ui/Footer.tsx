@@ -119,7 +119,6 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row sm:justify-between gap-2 text-xs text-white/55">
           <span>© 2026 CarLynk Africa. All rights reserved.</span>
-          <span>Built in Accra · Powered by trust.</span>
         </div>
       </div>
     </footer>
