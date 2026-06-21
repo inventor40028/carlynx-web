@@ -2,17 +2,55 @@
 
 import { useEffect, useState, type ReactNode } from 'react';
 
+const TOPVIEW_ASSET = '/images/topview.png';
+const MIN_AUTH_LOADER_TIME = 1000;
+
+function preloadImage(src: string) {
+  return new Promise<void>((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve();
+    img.onerror = () => resolve();
+    img.src = src;
+  });
+}
+
 interface FormDeliveryFrameProps {
   children: ReactNode;
   className?: string;
 }
 
 export default function FormDeliveryFrame({ children, className = '' }: FormDeliveryFrameProps) {
+  const [loading, setLoading] = useState(true);
+  const [loaderLeaving, setLoaderLeaving] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [carLeaving, setCarLeaving] = useState(false);
   const [gone, setGone] = useState(false);
 
   useEffect(() => {
+    let active = true;
+    let fadeTimer: number | undefined;
+
+    Promise.all([
+      preloadImage(TOPVIEW_ASSET),
+      new Promise<void>((resolve) => window.setTimeout(resolve, MIN_AUTH_LOADER_TIME)),
+    ]).then(() => {
+      if (!active) return;
+      setLoaderLeaving(true);
+      fadeTimer = window.setTimeout(() => {
+        if (!active) return;
+        setLoading(false);
+      }, 260);
+    });
+
+    return () => {
+      active = false;
+      if (fadeTimer) window.clearTimeout(fadeTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (loading) return;
+
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduceMotion) {
       setMounted(true);
@@ -29,7 +67,7 @@ export default function FormDeliveryFrame({ children, className = '' }: FormDeli
       window.clearTimeout(leave);
       window.clearTimeout(hide);
     };
-  }, []);
+  }, [loading]);
 
   return (
     <div className={`relative ${className}`} style={{ overflow: 'visible' }}>

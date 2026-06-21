@@ -10,8 +10,23 @@ export default function CarDriveStrip() {
 
   useEffect(() => {
     if (!ref.current) return;
-    const t = setTimeout(() => setStart(true), 60);
-    return () => clearTimeout(t);
+
+    const node = ref.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setStart(true);
+        observer.disconnect();
+      },
+      {
+        threshold: 0.35,
+        rootMargin: '0px 0px -12% 0px',
+      }
+    );
+
+    observer.observe(node);
+
+    return () => observer.disconnect();
   }, []);
 
   return (

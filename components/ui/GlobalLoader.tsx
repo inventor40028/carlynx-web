@@ -1,9 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const LOADER_ASSETS = ['/loader/leftlogo.png', '/loader/rightlogo.png'];
+const AUTH_EXTRA_ASSETS: Record<string, string[]> = {
+  '/auth/signin': ['/images/topview.png', '/images/mockupmobile.png'],
+  '/auth/signup': ['/images/topview.png', '/images/vowner.png'],
+  '/auth/driver-signup': ['/images/topview.png', '/images/drivermatch.png'],
+};
 const MIN_LOADER_TIME = 2000;
+const MIN_AUTH_LOADER_TIME = 1000;
 const FADE_TIME = 450;
 
 function preloadImage(src: string) {
@@ -16,6 +23,14 @@ function preloadImage(src: string) {
 }
 
 export default function GlobalLoader() {
+  const pathname = usePathname();
+  const isAuthRoute = pathname.startsWith('/auth/');
+  const assetsToPreload = useMemo(
+    () => isAuthRoute
+      ? [...LOADER_ASSETS, ...(AUTH_EXTRA_ASSETS[pathname] ?? ['/images/topview.png'])]
+      : LOADER_ASSETS,
+    [isAuthRoute, pathname]
+  );
   const [visible, setVisible] = useState(true);
   const [leaving, setLeaving] = useState(false);
 
@@ -34,11 +49,11 @@ export default function GlobalLoader() {
     });
 
     const waitForMinimumTime = new Promise<void>((resolve) => {
-      window.setTimeout(resolve, MIN_LOADER_TIME);
+      window.setTimeout(resolve, isAuthRoute ? MIN_AUTH_LOADER_TIME : MIN_LOADER_TIME);
     });
 
     Promise.all([
-      Promise.all(LOADER_ASSETS.map(preloadImage)),
+      Promise.all(assetsToPreload.map(preloadImage)),
       waitForWindowLoad,
       waitForMinimumTime,
     ]).then(() => {
@@ -56,7 +71,7 @@ export default function GlobalLoader() {
       if (fadeTimer) window.clearTimeout(fadeTimer);
       if (removeTimer) window.clearTimeout(removeTimer);
     };
-  }, []);
+  }, [assetsToPreload, isAuthRoute]);
 
   if (!visible) return null;
 
