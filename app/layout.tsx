@@ -4,6 +4,7 @@ import "./globals.css";
 import RippleEffect from "@/components/ui/RippleEffect";
 import ScrollAnimations from "@/components/ui/ScrollAnimations";
 import MetaMaskSuppressor from "@/components/ui/MetaMaskSuppressor";
+import GlobalLoader from "@/components/ui/GlobalLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <MetaMaskSuppressor />
+        <GlobalLoader />
         <RippleEffect />
         <ScrollAnimations />
         {children}
