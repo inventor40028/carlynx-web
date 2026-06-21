@@ -51,7 +51,7 @@ export default function DriverNav() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Brand */}
-          <Link href="/driver/dashboard" className="flex items-center gap-3">
+          <Link href="/driver/dashboard" className="flex items-center">
             <Image
               src="/logo-white.png"
               alt="CarLynk"
@@ -59,7 +59,6 @@ export default function DriverNav() {
               height={32}
               style={{ width: 'auto', height: '32px' }}
             />
-            <span className="text-xl font-bold">CarLynk</span>
           </Link>
 
           {/* Inline links — only at xl+ where there's room */}

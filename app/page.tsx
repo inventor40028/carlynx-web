@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-[#0d1b2e] text-white py-20 px-6">
+      <section className="bg-[#0d1b2e] text-white pt-8 pb-20 px-6 sm:pt-14 lg:py-20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="fade-in-up">
             <div className="text-[#e8c96a] font-bold text-sm tracking-widest mb-4">
