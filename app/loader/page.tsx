@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 export default function LoaderPreview() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#0d1b2e] text-white">
-      <section className="relative flex min-h-screen items-center justify-center px-6 py-16">
+    <main className="fixed inset-0 overflow-hidden bg-[#0d1b2e] text-white">
+      <section className="relative flex h-dvh w-full items-center justify-center overflow-hidden px-6">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(232,201,106,0.14),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.06),transparent_38%)]" />
 
         <div className="relative z-10 flex w-full max-w-4xl items-center justify-center">
-          <div className="relative h-[min(72vw,420px)] w-[min(72vw,420px)]">
+          <div className="relative h-[min(70vw,70dvh,420px)] w-[min(70vw,70dvh,420px)]">
             <div className="absolute inset-0 rounded-full bg-[#081424]/45 blur-3xl" />
 
             <div className="loader-piece inficir-left-piece absolute inset-0">
@@ -35,15 +35,6 @@ export default function LoaderPreview() {
 
         </div>
 
-        <div className="absolute bottom-4 right-4 hidden w-28 overflow-hidden rounded-xl border border-white/10 opacity-40 shadow-2xl sm:block">
-          <Image
-            src="/loader/illus.jpg"
-            alt="Loader animation reference"
-            width={832}
-            height={1255}
-            className="h-auto w-full"
-          />
-        </div>
       </section>
 
       <style>{`
