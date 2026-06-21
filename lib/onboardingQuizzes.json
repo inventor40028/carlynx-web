@@ -1,0 +1,911 @@
+{
+  "title": "CarLynk Africa Onboarding Quiz Extracted",
+  "encoding": "UTF-8",
+  "source_files": [
+    "CarLynk Onboarding Quiz - English.pdf",
+    "CarLynk Onboarding Quiz - Twi.pdf",
+    "CarLynk Africa Onboarding Quiz - Ga.pdf",
+    "CarLynk Africa Onboarding Quiz - Ewe.pdf"
+  ],
+  "notes": [
+    "The English PDF contains 10 driver questions and 10 car-owner questions.",
+    "The Twi, Ga, and Ewe PDFs contain 8 driver questions and 10 car-owner questions in the source files.",
+    "Correct answers are stored as option letters only, exactly as extracted from the PDFs."
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "source_file": "CarLynk Onboarding Quiz - English.pdf",
+      "sections": [
+        {
+          "audience": "driver",
+          "title": "Driver Onboarding Quiz",
+          "source_heading": "CarLynk Africa Driver Onboarding Quiz",
+          "questions": [
+            {
+              "number": 1,
+              "question": "What does CarLynk Africa do?",
+              "options": {
+                "A": "Sells vehicles",
+                "B": "Connects vehicle owners with trusted drivers",
+                "C": "Repairs vehicles",
+                "D": "Offers driving lessons"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 2,
+              "question": "What is the first step in the driver onboarding process?",
+              "options": {
+                "A": "Vehicle Handover",
+                "B": "Training",
+                "C": "Welcome Call",
+                "D": "Medical Exam"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 3,
+              "question": "Why must drivers complete a medical examination?",
+              "options": {
+                "A": "To get a loan",
+                "B": "To ensure they are fit and safe to drive",
+                "C": "To purchase a vehicle",
+                "D": "To open an account"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 4,
+              "question": "Which of the following is part of the medical examination?",
+              "options": {
+                "A": "Vision Test",
+                "B": "Hearing Test",
+                "C": "Blood Pressure Check",
+                "D": "All of the Above"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 5,
+              "question": "What must drivers complete before being matched with a vehicle?",
+              "options": {
+                "A": "Training and Assessment",
+                "B": "Vehicle Inspection",
+                "C": "Driver Interview",
+                "D": "Vehicle Purchase"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 6,
+              "question": "What is the minimum score required to pass the training assessment?",
+              "options": {
+                "A": "50%",
+                "B": "60%",
+                "C": "80%",
+                "D": "100%"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 7,
+              "question": "Who approves a driver’s application for a vehicle?",
+              "options": {
+                "A": "CarLynk Staff",
+                "B": "Insurance Company",
+                "C": "Vehicle Owner",
+                "D": "Police Service"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 8,
+              "question": "What happens during vehicle handover?",
+              "options": {
+                "A": "The vehicle is sold",
+                "B": "A 42-point inspection is completed",
+                "C": "The vehicle is repainted",
+                "D": "A new registration is issued"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 9,
+              "question": "What should a driver do in case of an emergency or accident?",
+              "options": {
+                "A": "Leave the scene",
+                "B": "Contact CarLynk and follow emergency procedures",
+                "C": "Continue driving",
+                "D": "Ignore the incident"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 10,
+              "question": "What is expected of every CarLynk driver?",
+              "options": {
+                "A": "Safe and professional driving",
+                "B": "Respect for platform policies",
+                "C": "Timely payments and accountability",
+                "D": "All of the Above"
+              },
+              "correct_answer": "D"
+            }
+          ]
+        },
+        {
+          "audience": "car_owner",
+          "title": "Car Owner Onboarding Quiz",
+          "source_heading": "CarLynk Africa Car Owner Onboarding Quiz",
+          "questions": [
+            {
+              "number": 1,
+              "question": "What does CarLynk Africa do?",
+              "options": {
+                "A": "Connects vehicle owners with trusted drivers",
+                "B": "Manufactures vehicles",
+                "C": "Imports vehicles",
+                "D": "Sells vehicle parts"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 2,
+              "question": "What is the first step in the car owner onboarding process?",
+              "options": {
+                "A": "Driver Matching",
+                "B": "Vehicle Inspection",
+                "C": "Welcome Call",
+                "D": "Subscription Payment"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 3,
+              "question": "What information is required when listing a vehicle?",
+              "options": {
+                "A": "Vehicle Photos",
+                "B": "Insurance Documents",
+                "C": "Roadworthy Information",
+                "D": "All of the Above"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 4,
+              "question": "Why does CarLynk inspect every vehicle?",
+              "options": {
+                "A": "To determine resale value",
+                "B": "To ensure safety and quality standards",
+                "C": "To increase subscription fees",
+                "D": "To change ownership"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 5,
+              "question": "How many points are checked during the vehicle inspection?",
+              "options": {
+                "A": "10",
+                "B": "20",
+                "C": "42",
+                "D": "100"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 6,
+              "question": "What technology is installed to help monitor and protect vehicles?",
+              "options": {
+                "A": "GPS Tracking",
+                "B": "Dashcam",
+                "C": "Vehicle Monitoring System",
+                "D": "All of the Above"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 7,
+              "question": "Who chooses the driver that will operate their vehicle?",
+              "options": {
+                "A": "CarLynk Staff",
+                "B": "Vehicle Owner",
+                "C": "Insurance Company",
+                "D": "Driver Union"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 8,
+              "question": "What should owners review before approving a driver?",
+              "options": {
+                "A": "Driver Profile",
+                "B": "Experience",
+                "C": "Verification Status",
+                "D": "All of the Above"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 9,
+              "question": "What happens before the vehicle becomes active on the platform?",
+              "options": {
+                "A": "Vehicle Handover and Contract Signing",
+                "B": "Vehicle Sale",
+                "C": "Ownership Transfer",
+                "D": "Driver Loan Approval"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 10,
+              "question": "What is one key benefit of using CarLynk Africa?",
+              "options": {
+                "A": "Generating income from your vehicle",
+                "B": "Access to verified drivers",
+                "C": "Vehicle monitoring and support",
+                "D": "All of the Above"
+              },
+              "correct_answer": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Twi",
+      "source_file": "CarLynk Onboarding Quiz - Twi.pdf",
+      "sections": [
+        {
+          "audience": "driver",
+          "title": "Driver Quiz",
+          "source_heading": "CarLynk Africa Driver Quiz (Twi)",
+          "questions": [
+            {
+              "number": 1,
+              "question": "CarLynk Africa yɛ adwuma bɛn?",
+              "options": {
+                "A": "Ɛtɔn kar",
+                "B": "Ɛka kar wura ne driver a wɔwɔ ahotoso bom",
+                "C": "Ɛsiesie kar",
+                "D": "Ɛma driving sukuu"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 2,
+              "question": "Dɛn na ɛyɛ ade a edi kan wɔ onboarding no mu?",
+              "options": {
+                "A": "Kar Handover",
+                "B": "Training",
+                "C": "Welcome Call",
+                "D": "Medical Exam"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 3,
+              "question": "Adɛn nti na ɛsɛ sɛ driver yɛ medical exam?",
+              "options": {
+                "A": "Sɛ ɔbɛtɔ kar",
+                "B": "Sɛ wɔahu sɛ ɔwɔ apɔwmuden na obetumi aka kar yiye",
+                "C": "Sɛ ɔbɛnya loan",
+                "D": "Sɛ ɔbɛyɛ registration"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 4,
+              "question": "Dɛn na wɔhwɛ wɔ medical exam no mu?",
+              "options": {
+                "A": "Aniwa",
+                "B": "Asom",
+                "C": "Mogya mmoroso",
+                "D": "Ne nyinaa"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 5,
+              "question": "Dɛn na ɛsɛ sɛ driver wie ansa na wɔde no akɔ matching?",
+              "options": {
+                "A": "Training ne Test",
+                "B": "Kar Purchase",
+                "C": "Interview",
+                "D": "Insurance Claim"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 6,
+              "question": "Hena na ɔpene driver bi so ansa na ɔnya kar?",
+              "options": {
+                "A": "CarLynk Staff",
+                "B": "Kar Wura",
+                "C": "Police",
+                "D": "Insurance Company"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 7,
+              "question": "Dɛn na ɛkɔ so wɔ vehicle handover mu?",
+              "options": {
+                "A": "Wɔtɔn kar no",
+                "B": "Wɔyɛ 42-point inspection",
+                "C": "Wɔsesa registration",
+                "D": "Wɔhyɛ kar no ahoɔfɛ"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 8,
+              "question": "Sɛ asiane ba a, dɛn na ɛsɛ sɛ driver yɛ?",
+              "options": {
+                "A": "Gyae hɔ",
+                "B": "Frɛ CarLynk na di emergency procedures akyi",
+                "C": "Kɔ so ka kar",
+                "D": "Mfa ho"
+              },
+              "correct_answer": "B"
+            }
+          ]
+        },
+        {
+          "audience": "car_owner",
+          "title": "Car Owner Quiz",
+          "source_heading": "CarLynk Africa Car Owner Quiz (Twi)",
+          "questions": [
+            {
+              "number": 1,
+              "question": "CarLynk Africa yɛ adwuma bɛn?",
+              "options": {
+                "A": "Ɛtɔn kar",
+                "B": "Ɛka kar wuranom ne drivers a wɔwɔ ahotoso bom",
+                "C": "Ɛsiesie kar",
+                "D": "Ɛma loan"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 2,
+              "question": "Dɛn na ɛyɛ ade a edi kan wɔ car owner onboarding no mu?",
+              "options": {
+                "A": "Driver Matching",
+                "B": "Vehicle Inspection",
+                "C": "Welcome Call",
+                "D": "Subscription Payment"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 3,
+              "question": "Dɛn na ɛsɛ sɛ wokɔma bere a worelisti wo kar no?",
+              "options": {
+                "A": "Kar mfonini",
+                "B": "Insurance Documents",
+                "C": "Roadworthy Certificate",
+                "D": "Ne nyinaa"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 4,
+              "question": "Adɛn nti na CarLynk yɛ vehicle inspection?",
+              "options": {
+                "A": "Sɛ wɔahu kar no bo",
+                "B": "Sɛ wɔhwɛ ahobammɔ ne tebea pa",
+                "C": "Sɛ wɔma subscription bo yɛ den",
+                "D": "Sɛ wɔtɔn kar no"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 5,
+              "question": "Nneɛma ahorow dodow sɛn na wɔhwɛ wɔ inspection no mu?",
+              "options": {
+                "A": "10",
+                "B": "20",
+                "C": "42",
+                "D": "100"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 6,
+              "question": "Dɛn na wɔde gu kar no mu de bɔ ho ban?",
+              "options": {
+                "A": "GPS Tracker",
+                "B": "Dashcam",
+                "C": "Vehicle Monitoring System",
+                "D": "Ne nyinaa"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 7,
+              "question": "Hena na ɔpaw driver a ɔbɛka ne kar no?",
+              "options": {
+                "A": "CarLynk Staff",
+                "B": "Kar Wura",
+                "C": "Police",
+                "D": "Insurance Company"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 8,
+              "question": "Dɛn na ɛsɛ sɛ kar wura hwɛ wɔ driver profile mu?",
+              "options": {
+                "A": "Ne suahu",
+                "B": "Ne verification",
+                "C": "Ne profile",
+                "D": "Ne nyinaa"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 9,
+              "question": "Dɛn na ɛba ansa na kar no bɛyɛ active wɔ platform no so?",
+              "options": {
+                "A": "Vehicle Handover ne Contract Signing",
+                "B": "Vehicle Sale",
+                "C": "Ownership Transfer",
+                "D": "Loan Approval"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 10,
+              "question": "Mfaso bɛn na CarLynk de ma kar wuranom?",
+              "options": {
+                "A": "Sika a wonya fi wɔn kar mu",
+                "B": "Verified Drivers",
+                "C": "Vehicle Monitoring",
+                "D": "Ne nyinaa"
+              },
+              "correct_answer": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Ga",
+      "source_file": "CarLynk Africa Onboarding Quiz - Ga.pdf",
+      "sections": [
+        {
+          "audience": "driver",
+          "title": "Driver Quiz",
+          "source_heading": "CarLynk Africa Driver Quiz (Ga)",
+          "questions": [
+            {
+              "number": 1,
+              "question": "CarLynk Africa hewɔ mli ni?",
+              "options": {
+                "A": "Etsɔ moto",
+                "B": "Ekpa moto wɔn ni drivers amɛ hewalɛ",
+                "C": "Esumɔ moto",
+                "D": "Etsɔ driving school"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 2,
+              "question": "Mli onboarding no, shishi ni baa?",
+              "options": {
+                "A": "Vehicle Handover",
+                "B": "Training",
+                "C": "Welcome Call",
+                "D": "Medical Exam"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 3,
+              "question": "Bo ni baa ni drivers lɛ medical exam?",
+              "options": {
+                "A": "Ni eba moto",
+                "B": "Ni wojɔ ni eha wɔn yɛmɔ moto",
+                "C": "Ni eba loan",
+                "D": "Ni eregister"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 4,
+              "question": "Medical exam no, dɛn ni wɔjɔ?",
+              "options": {
+                "A": "Nyɔŋmaa (Eyes)",
+                "B": "Toi (Ears)",
+                "C": "Blood Pressure",
+                "D": "Nyɛ hewalɛ"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 5,
+              "question": "Dɛn ni driver lɛ baa ni ewie tsui matching?",
+              "options": {
+                "A": "Training ni Test",
+                "B": "Moto Purchase",
+                "C": "Interview",
+                "D": "Insurance"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 6,
+              "question": "Hena ni epɛ driver no so?",
+              "options": {
+                "A": "CarLynk Staff",
+                "B": "Moto Wura",
+                "C": "Police",
+                "D": "Insurance Company"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 7,
+              "question": "Dɛn ni eba vehicle handover no mu?",
+              "options": {
+                "A": "Wɔtsɔ moto",
+                "B": "Wɔyɛ inspection",
+                "C": "Wɔsesa registration",
+                "D": "Wɔhyɛ moto fɛ"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 8,
+              "question": "Sɛ accident ba a, dɛn ni driver baa?",
+              "options": {
+                "A": "Osi hɔ",
+                "B": "Ofrɛ CarLynk na odi emergency procedures no so",
+                "C": "Oto nɔ",
+                "D": "Omfa ho"
+              },
+              "correct_answer": "B"
+            }
+          ]
+        },
+        {
+          "audience": "car_owner",
+          "title": "Car Owner Quiz",
+          "source_heading": "CarLynk Africa Car Owner Quiz (Ga)",
+          "questions": [
+            {
+              "number": 1,
+              "question": "CarLynk Africa hewɔ mli ni?",
+              "options": {
+                "A": "Etsɔ moto",
+                "B": "Ekpa moto wɔn ni drivers amɛ hewalɛ",
+                "C": "Esumɔ moto",
+                "D": "Ema loan"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 2,
+              "question": "Shishi ni baa onboarding no mu?",
+              "options": {
+                "A": "Driver Matching",
+                "B": "Vehicle Inspection",
+                "C": "Welcome Call",
+                "D": "Subscription Payment"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 3,
+              "question": "Dɛn ni moto wura lɛ baa ni elisti moto no?",
+              "options": {
+                "A": "Moto Photos",
+                "B": "Insurance Documents",
+                "C": "Roadworthy Certificate",
+                "D": "Nyɛ hewalɛ"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 4,
+              "question": "Bo ni CarLynk yɛ vehicle inspection?",
+              "options": {
+                "A": "Ni ekpɔ moto no bo",
+                "B": "Ni eha moto no yɛmɔ ni ahobammɔ",
+                "C": "Ni ekɛ subscription fee",
+                "D": "Ni etsɔ moto no"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 5,
+              "question": "Inspection no mu, point akɛ ni wɔjɔ?",
+              "options": {
+                "A": "10",
+                "B": "20",
+                "C": "42",
+                "D": "100"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 6,
+              "question": "Dɛn ni wɔde gu moto no mu ni ebɔ ho ban?",
+              "options": {
+                "A": "GPS Tracker",
+                "B": "Dashcam",
+                "C": "Monitoring System",
+                "D": "Nyɛ hewalɛ"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 7,
+              "question": "Hena ni epaw driver a eba moto no?",
+              "options": {
+                "A": "CarLynk Staff",
+                "B": "Moto Wura",
+                "C": "Police",
+                "D": "Insurance Company"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 8,
+              "question": "Dɛn ni moto wura lɛ baa ni ejɔ wɔ driver profile no mu?",
+              "options": {
+                "A": "Experience",
+                "B": "Verification",
+                "C": "Profile",
+                "D": "Nyɛ hewalɛ"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 9,
+              "question": "Dɛn ni eba tsui ni moto no bɛyɛ active?",
+              "options": {
+                "A": "Vehicle Handover ni Contract Signing",
+                "B": "Vehicle Sale",
+                "C": "Ownership Transfer",
+                "D": "Loan Approval"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 10,
+              "question": "Mfaso ni CarLynk he moto wɔn he?",
+              "options": {
+                "A": "Income fi moto no mu",
+                "B": "Verified Drivers",
+                "C": "Vehicle Monitoring",
+                "D": "Nyɛ hewalɛ"
+              },
+              "correct_answer": "D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Ewe",
+      "source_file": "CarLynk Africa Onboarding Quiz - Ewe.pdf",
+      "sections": [
+        {
+          "audience": "driver",
+          "title": "Driver Quiz",
+          "source_heading": "CarLynk Africa Driver Quiz (Ewe)",
+          "questions": [
+            {
+              "number": 1,
+              "question": "Nu ka CarLynk Africa wɔa?",
+              "options": {
+                "A": "Edzra gaɖiwo",
+                "B": "Etsɔ gaɖi tɔwo kple drivers siwo nye amegbetɔ nyuiwo ƒe ɖekawɔwɔ",
+                "C": "Etrɔna gaɖiwo",
+                "D": "Ema driving sukuu"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 2,
+              "question": "Nukae nye onboarding ƒe gɔmedzedze?",
+              "options": {
+                "A": "Vehicle Handover",
+                "B": "Training",
+                "C": "Welcome Call",
+                "D": "Medical Exam"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 3,
+              "question": "Ka ta wòle be driverwo nawɔ medical examination?",
+              "options": {
+                "A": "Be woaƒle gaɖi",
+                "B": "Be woakpɔ be wole lãmesẽ me na yɔyɔ gaɖi",
+                "C": "Be woakpɔ loan",
+                "D": "Be woaregister"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 4,
+              "question": "Nukae wona kpɔna le medical examination me?",
+              "options": {
+                "A": "Ŋku",
+                "B": "Tɔ",
+                "C": "Blood Pressure",
+                "D": "Esiawo katã"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 5,
+              "question": "Nukae driver la le be wòawu hafi matching?",
+              "options": {
+                "A": "Training kple Test",
+                "B": "Gaɖi ƒleƒle",
+                "C": "Interview",
+                "D": "Insurance"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 6,
+              "question": "Ame ka naa dzesi be driver la ate ŋu awɔ dɔ?",
+              "options": {
+                "A": "CarLynk Staff",
+                "B": "Gaɖi Tɔ",
+                "C": "Police",
+                "D": "Insurance Company"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 7,
+              "question": "Nukae dzɔna le vehicle handover me?",
+              "options": {
+                "A": "Wodzana gaɖi la",
+                "B": "Wowɔna inspection",
+                "C": "Wotrɔna registration",
+                "D": "Wowɔna gaɖi la dzeani"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 8,
+              "question": "Ne accident va a, nukae driver la le be wòawɔ?",
+              "options": {
+                "A": "Nayi",
+                "B": "Nafia CarLynk eye wòakplɔ emergency procedures yome",
+                "C": "Nayi dzi",
+                "D": "Megblɔ naneke o"
+              },
+              "correct_answer": "B"
+            }
+          ]
+        },
+        {
+          "audience": "car_owner",
+          "title": "Car Owner Quiz",
+          "source_heading": "CarLynk Africa Car Owner Quiz (Ewe)",
+          "questions": [
+            {
+              "number": 1,
+              "question": "Nukae CarLynk Africa wɔna?",
+              "options": {
+                "A": "Edzana gaɖiwo",
+                "B": "Etsɔ gaɖi tɔwo kple drivers siwo nye amegbetɔ nyuiwo ƒe ɖekawɔwɔ",
+                "C": "Etrɔna gaɖiwo",
+                "D": "Etsɔa loan"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 2,
+              "question": "Nukae nye car owner onboarding ƒe gɔmedzedze?",
+              "options": {
+                "A": "Driver Matching",
+                "B": "Vehicle Inspection",
+                "C": "Welcome Call",
+                "D": "Subscription Payment"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 3,
+              "question": "Nukae woatsɔ ne èle gaɖi la ƒe listing wɔm?",
+              "options": {
+                "A": "Gaɖi ƒe nɔnɔmetatawo",
+                "B": "Insurance Documents",
+                "C": "Roadworthy Certificate",
+                "D": "Esiawo katã"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 4,
+              "question": "Ka ta CarLynk wɔna vehicle inspection?",
+              "options": {
+                "A": "Be woakpɔ gaɖi la ƒe ga home",
+                "B": "Be woakpɔ be gaɖi la le dedie kple lãmesẽ me",
+                "C": "Be woakeke subscription fee",
+                "D": "Be woadzra gaɖi la"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 5,
+              "question": "Point nenie wɔkpɔna le inspection me?",
+              "options": {
+                "A": "10",
+                "B": "20",
+                "C": "42",
+                "D": "100"
+              },
+              "correct_answer": "C"
+            },
+            {
+              "number": 6,
+              "question": "Nukae wona tsɔna de gaɖi la ŋu hena dedie?",
+              "options": {
+                "A": "GPS Tracker",
+                "B": "Dashcam",
+                "C": "Vehicle Monitoring System",
+                "D": "Esiawo katã"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 7,
+              "question": "Ame ka tia driver si ayɔ gaɖi la?",
+              "options": {
+                "A": "CarLynk Staff",
+                "B": "Gaɖi Tɔ",
+                "C": "Police",
+                "D": "Insurance Company"
+              },
+              "correct_answer": "B"
+            },
+            {
+              "number": 8,
+              "question": "Nukae gaɖi tɔ la le be wòakpɔ le driver profile me?",
+              "options": {
+                "A": "Experience",
+                "B": "Verification Status",
+                "C": "Profile",
+                "D": "Esiawo katã"
+              },
+              "correct_answer": "D"
+            },
+            {
+              "number": 9,
+              "question": "Nukae dzɔna hafi gaɖi la nazu active le platform la dzi?",
+              "options": {
+                "A": "Vehicle Handover kple Contract Signing",
+                "B": "Vehicle Sale",
+                "C": "Ownership Transfer",
+                "D": "Loan Approval"
+              },
+              "correct_answer": "A"
+            },
+            {
+              "number": 10,
+              "question": "Mɔ ka ke CarLynk na gaɖi tɔwo?",
+              "options": {
+                "A": "Nunya sika tso gaɖi la me",
+                "B": "Verified Drivers",
+                "C": "Vehicle Monitoring",
+                "D": "Esiawo katã"
+              },
+              "correct_answer": "D"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
