@@ -13,6 +13,7 @@ import { LogOut, CalendarCheck, X } from 'lucide-react';
 import { useSession } from './useSession';
 import { clearSession } from '@/lib/session';
 import HamburgerIcon from '@/components/ui/HamburgerIcon';
+import ThemeIcon from '@/components/ui/ThemeIcon';
 
 const PUBLIC_LINKS = [
   { label: 'About', href: '/about' },
@@ -87,6 +88,15 @@ export default function Header() {
           {/* Wait until we know the session state to avoid a flash of the wrong UI */}
           {ready && (
             <nav className="flex items-center gap-3 sm:gap-5">
+              {/* Theme — desktop icon (mobile gets it inside the hamburger panel) */}
+              <Link
+                href="/theme"
+                aria-label="Change theme"
+                title="Change theme"
+                className="hidden xl:inline-flex items-center justify-center hover:text-[#e8c96a] transition-colors"
+              >
+                <ThemeIcon size={22} />
+              </Link>
               {session ? (
                 <>
                   <span className="text-sm text-[#e8c96a] hidden sm:inline">
@@ -144,7 +154,7 @@ export default function Header() {
                 Menu
               </div>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
-                {[...PUBLIC_LINKS, { label: 'Book An Appointment', href: '/book-appointment' }].map((link) => (
+                {[...PUBLIC_LINKS, { label: 'Book An Appointment', href: '/book-appointment' }, { label: 'Theme', href: '/theme' }].map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}

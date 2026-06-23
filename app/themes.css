@@ -1,0 +1,246 @@
+/*
+  CarLynk theme skins.
+  The site uses hardcoded Tailwind arbitrary color classes (e.g. bg-[#0d1b2e]).
+  Rather than edit every component, each alternate theme remaps those exact
+  classes here, scoped to html[data-theme="<id>"]. These selectors sit OUTSIDE
+  Tailwind's @layer utilities, so they win the cascade without !important.
+
+  royal-default = the base look (no overrides). Navy + royal blue stay present
+  in every theme per the brand rule.
+
+  Lineup:
+    Light : royal-default, golden-mist, slate-fleet
+    Dark  : royal-operations, trust-verified, kente-night
+*/
+
+/* ============================ GOLDEN MIST (light) ============================ */
+/* The bright twin of Glass Morphic: visible kente-gold frosted glass on a warm base. */
+html[data-theme^='golden-mist'] body {
+  background: #ffffff;
+}
+/* Plain full-width sections stay white. */
+html[data-theme^='golden-mist'] .bg-white { background-color: #ffffff; }
+/* Kente-gold frosted-glass on cards/panels (bg-white + the standard card border). */
+html[data-theme^='golden-mist'] .bg-white.border-\[\#cfd6e3\] {
+  background-color: rgba(234, 205, 128, 0.42);
+  backdrop-filter: blur(13px) saturate(150%);
+  -webkit-backdrop-filter: blur(13px) saturate(150%);
+  border-color: rgba(212, 148, 10, 0.34);
+  box-shadow: 0 6px 24px rgba(212, 148, 10, 0.10);
+}
+html[data-theme^='golden-mist'] .bg-\[\#0d1b2e\] { background-color: #0D1F3C; }
+html[data-theme^='golden-mist'] .bg-\[\#152440\] { background-color: #1A3260; }
+html[data-theme^='golden-mist'] .bg-\[\#eef3f8\] { background-color: #F4F6F9; }
+html[data-theme^='golden-mist'] .bg-\[\#e8c96a\] {
+  background-color: rgba(232, 201, 106, 0.9);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(255, 233, 170, 0.6);
+  box-shadow: 0 4px 18px rgba(232, 201, 106, 0.22);
+}
+html[data-theme^='golden-mist'] .bg-\[\#d4b556\] { background-color: #B87D08; }
+html[data-theme^='golden-mist'] .text-\[\#e8c96a\] { color: #E8B84B; }
+html[data-theme^='golden-mist'] .fill-\[\#e8c96a\] { fill: #D4940A; }
+html[data-theme^='golden-mist'] .border-\[\#cfd6e3\] { border-color: #E8D7AE; }
+html[data-theme^='golden-mist'] .bg-\[\#cfd6e3\] { background-color: #E8D7AE; }
+html[data-theme^='golden-mist'] .text-\[\#5b6575\] { color: #111827; }
+html[data-theme^='golden-mist'] .text-\[\#0f766e\] { color: #1B6B45; }
+html[data-theme^='golden-mist'] .bg-\[\#0f766e\] { background-color: #1B6B45; }
+html[data-theme^='golden-mist'] .text-\[\#dc2626\] { color: #C0392B; }
+html[data-theme^='golden-mist'] .bg-\[\#dc2626\] { background-color: #C0392B; }
+
+/* ---- Golden Mist NAVY: same white base, but frosted panels are deep navy ---- */
+html[data-theme='golden-mist-navy'] .bg-white.border-\[\#cfd6e3\] {
+  background-color: rgba(13, 31, 60, 0.85);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-color: rgba(140, 170, 220, 0.22);
+  box-shadow: 0 6px 24px rgba(13, 31, 60, 0.18);
+  color: #EAF1FB;
+}
+/* Text inside those navy cards goes light so it stays readable. */
+html[data-theme='golden-mist-navy'] .bg-white.border-\[\#cfd6e3\] .text-\[\#0d1b2e\],
+html[data-theme='golden-mist-navy'] .bg-white.border-\[\#cfd6e3\] .text-\[\#111827\],
+html[data-theme='golden-mist-navy'] .bg-white.border-\[\#cfd6e3\] .text-\[\#5b6575\] { color: #EAF1FB; }
+
+/* Keep the demo-account hint readable on its light inset panel. */
+html[data-theme='golden-mist-navy'] .bg-white.border-\[\#cfd6e3\] .bg-\[\#eef3f8\] .text-\[\#0d1b2e\],
+html[data-theme='golden-mist-navy'] .bg-white.border-\[\#cfd6e3\] .bg-\[\#eef3f8\] .text-\[\#5b6575\] { color: #0D1F3C; }
+
+/* ============================ SLATE FLEET (light) ============================ */
+html[data-theme='slate-fleet'] body { background: #E9EEF4; }
+html[data-theme='slate-fleet'] .bg-\[\#0d1b2e\] { background-color: #0D1F3C; }
+html[data-theme='slate-fleet'] .bg-\[\#152440\] { background-color: #1A3260; }
+html[data-theme='slate-fleet'] .bg-\[\#eef3f8\] { background-color: #DBE3ED; }
+html[data-theme='slate-fleet'] .bg-\[\#e8c96a\] { background-color: #1d4ed8; }
+html[data-theme='slate-fleet'] .bg-\[\#d4b556\] { background-color: #1e40af; }
+html[data-theme='slate-fleet'] .text-\[\#e8c96a\] { color: #1d4ed8; }
+html[data-theme='slate-fleet'] .fill-\[\#e8c96a\] { fill: #1d4ed8; }
+html[data-theme='slate-fleet'] .border-\[\#cfd6e3\] { border-color: #C7D2E0; }
+html[data-theme='slate-fleet'] .bg-\[\#cfd6e3\] { background-color: #C7D2E0; }
+html[data-theme='slate-fleet'] .text-\[\#5b6575\] { color: #5B6675; }
+
+/* ===================================================================== */
+/*  DARK THEMES — full skins (flip white surfaces + dark navy text)       */
+/* ===================================================================== */
+
+/* white cards/surfaces become the theme surface */
+html[data-theme='royal-operations'] .bg-white,
+html[data-theme^='glass-morphic'] .bg-white,
+html[data-theme='kente-night'] .bg-white { background-color: var(--skin-surface); color: var(--skin-text); }
+
+/* dark navy / ink text becomes light */
+html[data-theme='royal-operations'] .text-\[\#0d1b2e\],
+html[data-theme='royal-operations'] .text-\[\#111827\],
+html[data-theme^='glass-morphic'] .text-\[\#0d1b2e\],
+html[data-theme^='glass-morphic'] .text-\[\#111827\],
+html[data-theme='kente-night'] .text-\[\#0d1b2e\],
+html[data-theme='kente-night'] .text-\[\#111827\] { color: var(--skin-text); }
+
+/* muted text */
+html[data-theme='royal-operations'] .text-\[\#5b6575\],
+html[data-theme^='glass-morphic'] .text-\[\#5b6575\],
+html[data-theme='kente-night'] .text-\[\#5b6575\] { color: var(--skin-text-muted); }
+
+/* borders */
+html[data-theme='royal-operations'] .border-\[\#cfd6e3\],
+html[data-theme='royal-operations'] .border-\[\#0d1b2e\],
+html[data-theme^='glass-morphic'] .border-\[\#cfd6e3\],
+html[data-theme^='glass-morphic'] .border-\[\#0d1b2e\],
+html[data-theme='kente-night'] .border-\[\#cfd6e3\],
+html[data-theme='kente-night'] .border-\[\#0d1b2e\] { border-color: var(--skin-border); }
+
+/* brand bands + tint surfaces */
+html[data-theme='royal-operations'] .bg-\[\#0d1b2e\],
+html[data-theme^='glass-morphic'] .bg-\[\#0d1b2e\],
+html[data-theme='kente-night'] .bg-\[\#0d1b2e\] { background-color: var(--skin-brand); }
+
+html[data-theme='royal-operations'] .bg-\[\#122844\],
+html[data-theme^='glass-morphic'] .bg-\[\#122844\],
+html[data-theme='kente-night'] .bg-\[\#122844\] { background-color: var(--skin-surface-alt); }
+
+html[data-theme='royal-operations'] .bg-\[\#152440\],
+html[data-theme^='glass-morphic'] .bg-\[\#152440\],
+html[data-theme='kente-night'] .bg-\[\#152440\] { background-color: var(--skin-surface-alt); }
+
+html[data-theme='royal-operations'] .bg-\[\#eef3f8\],
+html[data-theme^='glass-morphic'] .bg-\[\#eef3f8\],
+html[data-theme='kente-night'] .bg-\[\#eef3f8\] { background-color: var(--skin-surface-alt); }
+
+html[data-theme='royal-operations'] .bg-\[\#cfd6e3\],
+html[data-theme^='glass-morphic'] .bg-\[\#cfd6e3\],
+html[data-theme='kente-night'] .bg-\[\#cfd6e3\] { background-color: var(--skin-border); }
+
+/* ---------------------------- ROYAL OPERATIONS ---------------------------- */
+html[data-theme='royal-operations'] {
+  --skin-brand: #141C27;
+  --skin-surface: #1A2330;
+  --skin-surface-alt: #232E3D;
+  --skin-text: #E8EDF4;
+  --skin-text-muted: #9AA7B8;
+  --skin-border: #2D3A4D;
+}
+html[data-theme='royal-operations'] body { background: #10161F; color: #E8EDF4; }
+html[data-theme='royal-operations'] .bg-\[\#e8c96a\] { background-color: #3B82F6; }
+html[data-theme='royal-operations'] .bg-\[\#d4b556\] { background-color: #2563EB; }
+html[data-theme='royal-operations'] .text-\[\#e8c96a\] { color: #5B9CF8; }
+html[data-theme='royal-operations'] .fill-\[\#e8c96a\] { fill: #5B9CF8; }
+html[data-theme='royal-operations'] .text-\[\#1d4ed8\] { color: #5B9CF8; }
+html[data-theme='royal-operations'] .bg-\[\#1d4ed8\] { background-color: #3B82F6; }
+html[data-theme='royal-operations'] .text-\[\#0f766e\] { color: #34D399; }
+html[data-theme='royal-operations'] .bg-\[\#0f766e\] { background-color: #34D399; }
+html[data-theme='royal-operations'] .text-\[\#1B6B45\] { color: #34D399; }
+html[data-theme='royal-operations'] .text-\[\#dc2626\] { color: #F87171; }
+html[data-theme='royal-operations'] .bg-\[\#dc2626\] { background-color: #F87171; }
+
+/* ------------------------------ GLASS MORPHIC ------------------------------ */
+html[data-theme^='glass-morphic'] {
+  --skin-brand: #0B1730;
+  --skin-surface: rgba(30, 48, 82, 0.55);
+  --skin-surface-alt: rgba(43, 63, 99, 0.45);
+  --skin-text: #EAF1FB;
+  --skin-text-muted: #A7B6CE;
+  --skin-border: rgba(140, 170, 220, 0.22);
+}
+html[data-theme^='glass-morphic'] body {
+  background:
+    radial-gradient(900px 600px at 12% -10%, rgba(232,201,106,0.10), transparent 60%),
+    radial-gradient(1000px 700px at 110% 10%, rgba(107,165,255,0.16), transparent 55%),
+    #0A1426;
+  color: #EAF1FB;
+}
+/* Frosted glass on cards/panels */
+html[data-theme^='glass-morphic'] .bg-white {
+  background-color: rgba(30, 48, 82, 0.5);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(140, 170, 220, 0.18);
+}
+html[data-theme^='glass-morphic'] .bg-\[\#0d1b2e\] {
+  background-color: rgba(11, 23, 48, 0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+html[data-theme^='glass-morphic'] .bg-\[\#e8c96a\] {
+  background-color: rgba(232, 201, 106, 0.82);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(255, 233, 170, 0.55);
+  box-shadow: 0 4px 18px rgba(232, 201, 106, 0.18);
+}
+html[data-theme^='glass-morphic'] .bg-\[\#d4b556\] {
+  background-color: rgba(212, 177, 84, 0.9);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+}
+html[data-theme^='glass-morphic'] .text-\[\#e8c96a\] { color: #F0D585; }
+html[data-theme^='glass-morphic'] .fill-\[\#e8c96a\] { fill: #E8C96A; }
+html[data-theme^='glass-morphic'] .text-\[\#1d4ed8\] { color: #6BA5FF; }
+html[data-theme^='glass-morphic'] .bg-\[\#1d4ed8\] { background-color: #3B6FD4; }
+html[data-theme^='glass-morphic'] .text-\[\#0f766e\] { color: #3FB984; }
+html[data-theme^='glass-morphic'] .bg-\[\#0f766e\] { background-color: #2E9E72; }
+html[data-theme^='glass-morphic'] .text-\[\#1B6B45\] { color: #3FB984; }
+html[data-theme^='glass-morphic'] .bg-\[\#1B6B45\] { background-color: #2E9E72; }
+html[data-theme^='glass-morphic'] .text-\[\#dc2626\] { color: #F0857A; }
+html[data-theme^='glass-morphic'] .bg-\[\#dc2626\] { background-color: #E0685C; }
+
+/* ---- Glass Morphic GOLD: same navy base, but frosted panels glow kente gold ---- */
+html[data-theme='glass-morphic-gold'] .bg-white {
+  background-color: rgba(232, 201, 106, 0.15);
+  backdrop-filter: blur(15px) saturate(155%);
+  -webkit-backdrop-filter: blur(15px) saturate(155%);
+  border: 1px solid rgba(232, 201, 106, 0.36);
+  box-shadow: 0 6px 26px rgba(232, 201, 106, 0.14);
+}
+html[data-theme='glass-morphic-gold'] body {
+  background:
+    radial-gradient(900px 600px at 12% -10%, rgba(232, 201, 106, 0.20), transparent 60%),
+    radial-gradient(1000px 700px at 110% 10%, rgba(232, 201, 106, 0.10), transparent 55%),
+    #0A1426;
+  color: #EAF1FB;
+}
+
+
+/* ------------------------------- KENTE NIGHT ------------------------------- */
+html[data-theme='kente-night'] {
+  --skin-brand: #0D1F3C;
+  --skin-surface: #0D1F3C;
+  --skin-surface-alt: #132A4A;
+  --skin-text: #F8FAFC;
+  --skin-text-muted: #B8C2D1;
+  --skin-border: #243B5C;
+}
+html[data-theme='kente-night'] body { background: #081424; color: #F8FAFC; }
+html[data-theme='kente-night'] .bg-\[\#e8c96a\] { background-color: #F0B429; }
+html[data-theme='kente-night'] .bg-\[\#d4b556\] { background-color: #D89A12; }
+html[data-theme='kente-night'] .text-\[\#e8c96a\] { color: #F0B429; }
+html[data-theme='kente-night'] .fill-\[\#e8c96a\] { fill: #F0B429; }
+html[data-theme='kente-night'] .text-\[\#1d4ed8\] { color: #3B82F6; }
+html[data-theme='kente-night'] .bg-\[\#1d4ed8\] { background-color: #3B82F6; }
+html[data-theme='kente-night'] .border-\[\#1d4ed8\] { border-color: #3B82F6; }
+html[data-theme='kente-night'] .text-\[\#0f766e\] { color: #3A8F66; }
+html[data-theme='kente-night'] .bg-\[\#0f766e\] { background-color: #3A8F66; }
+html[data-theme='kente-night'] .text-\[\#1B6B45\] { color: #4ADE80; }
+html[data-theme='kente-night'] .bg-\[\#1B6B45\] { background-color: #3A8F66; }
+html[data-theme='kente-night'] .text-\[\#dc2626\] { color: #E15A4B; }
+html[data-theme='kente-night'] .bg-\[\#dc2626\] { background-color: #E15A4B; }

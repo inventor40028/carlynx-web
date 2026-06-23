@@ -10,6 +10,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { X } from 'lucide-react';
 import { clearSession } from '@/lib/session';
 import HamburgerIcon from '@/components/ui/HamburgerIcon';
+import ThemeIcon from '@/components/ui/ThemeIcon';
 
 const LINKS = [
   { label: 'Dashboard', href: '/driver/dashboard' },
@@ -78,6 +79,15 @@ export default function DriverNav() {
 
           {/* Right cluster */}
           <div className="flex items-center gap-3">
+            {/* Theme — desktop icon */}
+            <Link
+              href="/theme"
+              aria-label="Change theme"
+              title="Change theme"
+              className="hidden xl:inline-flex items-center justify-center hover:text-[#e8c96a] transition-colors"
+            >
+              <ThemeIcon size={20} />
+            </Link>
             <span className="text-sm text-[#e8c96a] hidden xl:inline">Driver Dashboard</span>
             <button
               type="button"
@@ -116,7 +126,7 @@ export default function DriverNav() {
                 Driver Dashboard
               </div>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
-                {LINKS.map((link) => (
+                {[...LINKS, { label: 'Theme', href: '/theme' }].map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
