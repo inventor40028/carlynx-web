@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-Open <http://localhost:3000>.
+Open <https://carlynk-alpha.vercel.app/>.
 
 ### Demo Logins
 
