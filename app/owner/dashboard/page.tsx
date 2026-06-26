@@ -21,19 +21,17 @@ import StatusBadge from '@/components/ui/StatusBadge';
 import { ShieldCheck } from 'lucide-react';
 
 export default function OwnerDashboard() {
-  // Backend will provide real data
+  // TODO: Fetch real data from backend
+  // GET /api/owner/dashboard → { stats, vehicles, trustScore }
+
   const stats = {
-    totalVehicles: 3,
-    activePartnerships: 2,
-    pendingRequests: 5,
-    monthlyEarnings: 4500,
+    totalVehicles: 0,
+    activePartnerships: 0,
+    pendingRequests: 0,
+    monthlyEarnings: 0,
   };
 
-  const vehicles = [
-    { id: 1, make: 'Toyota', model: 'Corolla', year: 2020, plate: 'GR-1234-20', status: 'partnered' },
-    { id: 2, make: 'Honda', model: 'Civic', year: 2019, plate: 'GR-5678-19', status: 'available' },
-    { id: 3, make: 'Nissan', model: 'Sentra', year: 2021, plate: 'GR-9012-21', status: 'partnered' },
-  ];
+  const vehicles: any[] = []; // Backend will provide vehicle list
 
   const quickLinks = [
     { label: 'Onboarding', href: '/owner/onboarding' },
@@ -76,8 +74,8 @@ export default function OwnerDashboard() {
               <ShieldCheck size={40} className="text-[#1B6B45] shrink-0" />
               <div>
                 <div className="text-[#5b6575] text-sm mb-1">Trust Score</div>
-                <div className="text-4xl font-bold text-[#0d1b2e]">95 / 100</div>
-                <div className="text-sm text-[#1B6B45] font-semibold">Excellent standing</div>
+                <div className="text-4xl font-bold text-[#0d1b2e]">-- / 100</div>
+                <div className="text-sm text-[#5b6575]">Connect backend to see score</div>
               </div>
             </div>
           </Card>
@@ -86,20 +84,29 @@ export default function OwnerDashboard() {
           <Card className="mb-8 fade-in-up">
             <h2 className="text-xl font-bold text-[#0d1b2e] mb-4">Your Vehicles</h2>
             <div className="space-y-4">
-              {vehicles.map((vehicle) => (
-                <div
-                  key={vehicle.id}
-                  className="flex justify-between items-center border-b border-[#cfd6e3] pb-4 last:border-0"
-                >
-                  <div>
-                    <div className="font-bold text-[#0d1b2e]">
-                      {vehicle.make} {vehicle.model} ({vehicle.year})
-                    </div>
-                    <div className="text-sm text-[#5b6575]">{vehicle.plate}</div>
-                  </div>
-                  <StatusBadge status={vehicle.status} />
+              {vehicles.length === 0 ? (
+                <div className="text-center py-8 text-[#5b6575]">
+                  <p className="mb-4">No vehicles yet. Add your first vehicle to get started.</p>
+                  <a href="/owner/add-vehicle" className="text-[#0d1b2e] font-semibold hover:text-[#e8c96a]">
+                    + Add Vehicle
+                  </a>
                 </div>
-              ))}
+              ) : (
+                vehicles.map((vehicle) => (
+                  <div
+                    key={vehicle.id}
+                    className="flex justify-between items-center border-b border-[#cfd6e3] pb-4 last:border-0"
+                  >
+                    <div>
+                      <div className="font-bold text-[#0d1b2e]">
+                        {vehicle.make} {vehicle.model} ({vehicle.year})
+                      </div>
+                      <div className="text-sm text-[#5b6575]">{vehicle.plate}</div>
+                    </div>
+                    <StatusBadge status={vehicle.status} />
+                  </div>
+                ))
+              )}
             </div>
           </Card>
 
