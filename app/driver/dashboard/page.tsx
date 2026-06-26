@@ -20,19 +20,14 @@ import StatusBadge from '@/components/ui/StatusBadge';
 import { Star, ShieldCheck } from 'lucide-react';
 
 export default function DriverDashboard() {
-  // Backend will provide real data
-  const stats = {
-    activeContract: 1,
-    monthlyEarnings: 3200,
-    totalTrips: 45,
-    rating: 4.8,
-  };
+  // TODO: Fetch real data from backend
+  // GET /api/driver/dashboard → { stats, currentContract, trustScore }
 
-  const currentContract = {
-    vehicle: 'Toyota Corolla (GR-1234-20)',
-    owner: 'John Doe',
-    startDate: '2026-01-01',
-    status: 'active',
+  const stats = {
+    activeContract: 0,
+    monthlyEarnings: 0,
+    totalTrips: 0,
+    rating: 0,
   };
 
   const quickLinks = [
@@ -79,8 +74,8 @@ export default function DriverDashboard() {
               <ShieldCheck size={40} className="text-[#1B6B45] shrink-0" />
               <div>
                 <div className="text-[#5b6575] text-sm mb-1">Trust Score</div>
-                <div className="text-4xl font-bold text-[#0d1b2e]">92 / 100</div>
-                <div className="text-sm text-[#1B6B45] font-semibold">Good standing</div>
+                <div className="text-4xl font-bold text-[#0d1b2e]">-- / 100</div>
+                <div className="text-sm text-[#5b6575]">Connect backend to see score</div>
               </div>
             </div>
           </Card>
@@ -88,13 +83,11 @@ export default function DriverDashboard() {
           {/* Current Partnership */}
           <Card className="mb-8 fade-in-up">
             <h2 className="text-xl font-bold text-[#0d1b2e] mb-4">Current Partnership</h2>
-            <div className="flex justify-between items-start">
-              <div>
-                <div className="font-bold text-[#0d1b2e] mb-2">{currentContract.vehicle}</div>
-                <div className="text-sm text-[#5b6575] mb-1">Owner: {currentContract.owner}</div>
-                <div className="text-sm text-[#5b6575]">Started: {currentContract.startDate}</div>
-              </div>
-              <StatusBadge status={currentContract.status} />
+            <div className="text-center py-8 text-[#5b6575]">
+              <p className="mb-4">No active partnership yet. Browse available vehicles to get started.</p>
+              <a href="/driver/vehicles" className="text-[#0d1b2e] font-semibold hover:text-[#1d4ed8]">
+                Browse Vehicles
+              </a>
             </div>
           </Card>
 
