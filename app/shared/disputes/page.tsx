@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// DISPUTES PAGE — shared by owner + driver
+// ─────────────────────────────────────────────────────────────────────────────
+// File a dispute: payment issue, vehicle damage, contract breach, etc.
+// Either party can start; Legal Officer + Operations Manager mediate.
+//
+// Backend integration points:
+//   GET  /api/disputes/me                   → Dispute[] for current user
+//   POST /api/disputes                      → file new dispute
+//   POST /api/disputes/:id/respond          → add evidence/comments
+//   PATCH /api/disputes/:id/resolve         → admin marks resolved (audit log entry)
+//
+// Legal Officer admin dashboard sees all disputes; can assign resolution status.
+// ─────────────────────────────────────────────────────────────────────────────
 // Disputes page
 'use client';
 

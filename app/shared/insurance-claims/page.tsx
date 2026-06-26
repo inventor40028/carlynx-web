@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// INSURANCE CLAIMS PAGE — shared by owner + driver
+// ─────────────────────────────────────────────────────────────────────────────
+// File insurance claim: accident damage, theft, vandalism.
+// Upload photos, police report, witness statements.
+//
+// Backend integration points:
+//   GET  /api/insurance/claims              → InsuranceClaim[] for current user
+//   POST /api/insurance/claims              → file new claim (multipart for evidence)
+//   PATCH /api/insurance/claims/:id/status  → admin updates status
+//
+// Operations Manager + Legal Officer track all claims. Evidence uploaded to
+// Supabase Storage bucket `insurance-claims/`.
+// ─────────────────────────────────────────────────────────────────────────────
 // Insurance Claims page
 import RoleNav from '@/components/ui/RoleNav';
 import Footer from '@/components/ui/Footer';

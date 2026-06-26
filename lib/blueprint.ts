@@ -1,3 +1,24 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// BLUEPRINT — business rules and mock data for all CarLynk operations pages
+// ─────────────────────────────────────────────────────────────────────────────
+// What this file does:
+//   Contains all hardcoded business data used across the operations pages
+//   (vehicles, contracts, inspections, payments, termination rules, etc.).
+//   All of this is MOCK — it exists so pages can be built and demoed offline.
+//
+// What backend replaces:
+//   Every exported array/const below becomes a backend API response.
+//   The TypeScript interfaces below ARE the contract — mirror them in Supabase.
+//
+// Important business rules in this file (backend must enforce these server-side):
+//   - terminationTypes: notice period per termination type; penalties for no-notice
+//   - paymentEscalation: late-payment escalation tiers
+//   - inspectionChecklist: 42-point inspection used at contract start/end
+//   - commissionRate: platform % taken from driver earnings (currently shown as 15%)
+//
+// Do NOT remove this file until the backend API is live and all pages fetch real data.
+// ─────────────────────────────────────────────────────────────────────────────
+
 // Central blueprint data — single source of truth for all CarLynk operations pages.
 // Backend will replace these arrays with real API data later.
 

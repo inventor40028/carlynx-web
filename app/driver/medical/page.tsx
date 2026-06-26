@@ -1,3 +1,16 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// DRIVER MEDICAL EXAMINATION — driver only (onboarding step 2.5)
+// ─────────────────────────────────────────────────────────────────────────────
+// Upload medical certificate proving fitness to drive.
+// HR Manager reviews and approves/rejects.
+//
+// Backend integration points:
+//   GET  /api/driver/medical                → { status, uploadedAt, expiryDate, documentUrl }
+//   POST /api/driver/medical/upload         → multipart upload to Supabase Storage `medical-docs/`
+//   PATCH /api/admin/hr/medical/:id/review  → HR approves/rejects (audit log entry)
+//
+// HR Manager dashboard lists all pending medical submissions.
+// ─────────────────────────────────────────────────────────────────────────────
 // Driver Medical Examination page (Onboarding Step 2.5)
 import DriverNav from '@/components/driver/DriverNav';
 import Footer from '@/components/ui/Footer';

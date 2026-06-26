@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// BOOK APPOINTMENT PAGE — public route (lead capture)
+// ─────────────────────────────────────────────────────────────────────────────
+// Weekday picker, time slot, name/email/phone, reason.
+// Currently shows success state in-browser; backend will store + send confirmation email.
+//
+// Backend integration points:
+//   POST /api/appointments  { name, email, phone, role, preferredDate, preferredTime, message }
+//   → { id, status: 'pending' }
+//   Send confirmation email via Resend/Postmark.
+//   Customer Service Lead dashboard lists all pending appointments.
+//
+// Marketing Lead can track appointment conversion rate from their dashboard.
+// ─────────────────────────────────────────────────────────────────────────────
 // Book an Appointment — weekday picker, time slot, reason. Frontend stub:
 // submitting shows a success state. Backend will store the booking and confirm via email.
 'use client';

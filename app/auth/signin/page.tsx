@@ -1,4 +1,21 @@
-// Sign in page
+// ─────────────────────────────────────────────────────────────────────────────
+// SIGN IN PAGE — public route, both owners and drivers land here
+// ─────────────────────────────────────────────────────────────────────────────
+// Animations:
+//   • FormDeliveryFrame  — top-view car drags the form card down on load
+//   • SectionBackground  — blurred image behind the form
+//
+// Backend integration point:
+//   Replace the demo credential check below with:
+//   POST /api/auth/login  { email, password }  → { token, session }
+//   On success: call setSession(session) then router.push to role dashboard.
+//   On failure: show the error message returned by the API (not alert()).
+//   The JWT must go in an httpOnly cookie (the backend sets it via Set-Cookie).
+//
+// Demo accounts (remove these from the UI in production):
+//   Owner:  owner@carlynx.com / owner123
+//   Driver: driver@carlynx.com / driver123
+// ─────────────────────────────────────────────────────────────────────────────
 'use client';
 
 import { useState } from 'react';

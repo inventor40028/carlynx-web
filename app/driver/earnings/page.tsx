@@ -1,3 +1,18 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// EARNINGS REPORT PAGE — driver only
+// ─────────────────────────────────────────────────────────────────────────────
+// Form for the driver to submit a daily earnings report (revenue, fuel,
+// commission, net to owner). Owner can later approve/dispute.
+//
+// Backend integration points:
+//   GET  /api/driver/earnings?period=week|month  → EarningsReport[]
+//   POST /api/driver/earnings                    → submit new report
+//   PUT  /api/driver/earnings/:id                → edit pending report
+//   Owner side: PATCH /api/owner/earnings/:id/approve|dispute
+//
+// All amounts in GHS. Commission % defined in lib/blueprint.ts.
+// Finance Manager admin dashboard sees these reports via /api/admin/finance/earnings.
+// ─────────────────────────────────────────────────────────────────────────────
 // Earnings report page
 'use client';
 

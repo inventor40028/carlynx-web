@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// EMERGENCY ALERT PAGE — shared by owner + driver
+// ─────────────────────────────────────────────────────────────────────────────
+// Panic button: accident, theft, medical emergency, breakdown.
+// Sends alert to Operations Manager + Security Analyst + local authorities.
+//
+// Backend integration points:
+//   POST /api/emergency/alert  { type, lat, lng, notes }
+//   → Creates emergency_alerts record, triggers push notification to admins,
+//     optionally triggers SMS to predefined emergency contacts.
+//   GET /api/emergency/history → past alerts for current user
+//
+// Security Analyst + Operations Manager dashboards see all alerts in real-time.
+// ─────────────────────────────────────────────────────────────────────────────
 'use client';
 
 import { useState } from 'react';

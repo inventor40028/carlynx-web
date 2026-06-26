@@ -1,3 +1,16 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// OWNER DASHBOARD — protected route (role = 'owner')
+// ─────────────────────────────────────────────────────────────────────────────
+// Shows: stats (vehicles, partnerships, earnings, pending requests), trust score,
+// vehicle list with status badges, quick nav links.
+//
+// All data below is MOCK — hardcoded for UI development.
+// Backend integration points:
+//   GET /api/owner/dashboard  → { stats, vehicles, trustScore }
+//   GET /api/owner/vehicles   → Vehicle[]  (for the vehicle list)
+//   Stats fields: totalVehicles, activePartnerships, pendingRequests, monthlyEarnings (GHS)
+//   Trust score: 0–100, computed server-side from KYC + contracts + incidents + payments
+// ─────────────────────────────────────────────────────────────────────────────
 // Owner dashboard page
 import Link from 'next/link';
 import OwnerNav from '@/components/owner/OwnerNav';

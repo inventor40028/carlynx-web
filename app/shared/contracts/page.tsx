@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// CONTRACTS PAGE — shared by owner + driver (RoleNav switches based on session)
+// ─────────────────────────────────────────────────────────────────────────────
+// Shows: active partnership contract, termination types & notice periods,
+// 7-step termination process, no-notice penalty notice.
+//
+// Business rules live in lib/blueprint.ts (terminationTypes). Backend MUST
+// enforce the same rules — don't trust the frontend to compute penalties.
+//
+// Backend integration points:
+//   GET  /api/contracts/me                  → active contract for current user
+//   POST /api/contracts/:id/terminate       → start termination flow
+//   GET  /api/contracts/:id/document        → signed PDF (Supabase Storage)
+// ─────────────────────────────────────────────────────────────────────────────
 // Contracts page
 import RoleNav from '@/components/ui/RoleNav';
 import Footer from '@/components/ui/Footer';

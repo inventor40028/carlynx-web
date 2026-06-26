@@ -1,3 +1,18 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// SUBSCRIPTION PLANS PAGE — role-aware
+// ─────────────────────────────────────────────────────────────────────────────
+// Shows subscription tiers. Logged-in driver sees only driver plans;
+// logged-in owner sees only owner plans. Anonymous users see all.
+//
+// Backend integration points:
+//   GET  /api/subscriptions/plans            → SubscriptionPlan[] filtered by role
+//   POST /api/subscriptions/subscribe        → { planId } → initiates Paystack payment
+//   POST /api/webhooks/paystack              → charge.success activates subscription
+//   GET  /api/subscriptions/my-subscription  → current user's active subscription
+//
+// Finance Manager dashboard tracks all subscriptions + revenue.
+// Paystack charges are one-time or recurring (monthly/yearly) per plan.
+// ─────────────────────────────────────────────────────────────────────────────
 // Subscription Plans — role-aware.
 // Logged-in driver sees only driver plans, logged-in owner sees only owner plans.
 // Backend handles actual subscription creation and payment activation.

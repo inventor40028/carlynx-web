@@ -1,3 +1,16 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// PAYMENTS PAGE — shared by owner + driver
+// ─────────────────────────────────────────────────────────────────────────────
+// Shows: weekly settlement schedule, late-payment escalation tiers, escrow note.
+//
+// Backend integration points:
+//   GET  /api/payments/me?period=week|month  → PaymentRow[]
+//   Paystack webhook (POST /api/webhooks/paystack) writes to `payments` table.
+//   Events: charge.success, transfer.success, refund.processed
+//   All amounts in GHS — display as "GH₵ X,XXX".
+//
+// Escalation rules live in lib/blueprint.ts (paymentEscalation). Enforce server-side.
+// ─────────────────────────────────────────────────────────────────────────────
 // Payments page — weekly settlement, late-payment escalation, escrow note
 import RoleNav from '@/components/ui/RoleNav';
 import Footer from '@/components/ui/Footer';

@@ -1,3 +1,22 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// ADD VEHICLE PAGE — owner only
+// ─────────────────────────────────────────────────────────────────────────────
+// Multi-section form: details, photos (4 angles), partnership terms (rates).
+//
+// Backend integration point:
+//   POST /api/owner/vehicles  (multipart/form-data — includes photo files)
+//   Fields: make, model, year, plateNumber, color, mileage, location,
+//           dailyRate, weeklyRate, monthlyRate, photos[]
+//   Returns: { id, ...vehicle }
+//   On success: router.push('/owner/dashboard')
+//
+// Photo uploads:
+//   - Frontend uses <ImageUpload> component (handles file selection)
+//   - Backend uploads to Supabase Storage bucket `vehicle-photos/`
+//   - Store URLs in `vehicle_photos` table with position (front/side/back/interior)
+//
+// Fleet Manager admin dashboard sees the new vehicle in its registry instantly.
+// ─────────────────────────────────────────────────────────────────────────────
 // Add vehicle page
 'use client';
 

@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// MAINTENANCE PAGE — shared by owner + driver
+// ─────────────────────────────────────────────────────────────────────────────
+// Shows: maintenance history, scheduled service, report new issue.
+// Driver can report issues; owner approves/schedules work; Fleet Manager tracks all.
+//
+// Backend integration points:
+//   GET  /api/maintenance/me                → MaintenanceRecord[] for current user
+//   POST /api/maintenance/report            → driver submits issue
+//   PATCH /api/maintenance/:id/schedule     → owner schedules repair
+//   PATCH /api/maintenance/:id/complete     → mark work done
+//
+// Fleet Manager dashboard sees all maintenance across all vehicles.
+// ─────────────────────────────────────────────────────────────────────────────
 // Maintenance page
 import RoleNav from '@/components/ui/RoleNav';
 import Footer from '@/components/ui/Footer';

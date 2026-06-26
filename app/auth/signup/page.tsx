@@ -1,4 +1,17 @@
-// Sign up page
+// ─────────────────────────────────────────────────────────────────────────────
+// OWNER SIGNUP PAGE — public route
+// ─────────────────────────────────────────────────────────────────────────────
+// Collects: name, email, phone, password, role confirmation (owner).
+// On submit → currently just sets a demo session directly.
+//
+// Backend integration point:
+//   POST /api/auth/signup/owner  { name, email, phone, password }
+//   → { token, session }
+//   On success: call setSession(session) → router.push('/owner/onboarding')
+//   Owner must then complete onboarding + KYC before their dashboard is active.
+//
+// Animations: FormDeliveryFrame (car drags form down), SectionBackground (vowner.png)
+// ─────────────────────────────────────────────────────────────────────────────
 'use client';
 
 import { useState, Suspense } from 'react';

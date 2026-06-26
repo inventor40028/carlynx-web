@@ -1,3 +1,15 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// DRIVER DASHBOARD — protected route (role = 'driver')
+// ─────────────────────────────────────────────────────────────────────────────
+// Shows: stats (earnings, contract status, KYC status, trust score),
+// current vehicle/contract, quick nav links to all driver pages.
+//
+// All data below is MOCK — hardcoded for UI development.
+// Backend integration points:
+//   GET /api/driver/dashboard  → { stats, currentContract, currentVehicle, trustScore }
+//   Stats fields: weeklyEarnings (GHS), monthlyEarnings (GHS), contractStatus, kycStatus
+//   Contract/vehicle linked via partnership_id from Supabase.
+// ─────────────────────────────────────────────────────────────────────────────
 // Driver dashboard page
 import Link from 'next/link';
 import DriverNav from '@/components/driver/DriverNav';

@@ -1,3 +1,18 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// VEHICLE PERFORMANCE — owner only
+// ─────────────────────────────────────────────────────────────────────────────
+// Performance dashboard for each of owner's vehicles: earnings, mileage, maintenance,
+// contract status. Small front photo per card; click "View" → modal with full details
+// + live device feed (GPS tracking, diagnostics).
+//
+// Backend integration points:
+//   GET  /api/owner/performance              → VehiclePerformance[] for all owner's vehicles
+//   Each record: { vehicleId, totalEarnings, mileage, maintenanceAlerts, partnershipStatus }
+//   Optional: GET /api/vehicles/:id/live-data → real-time GPS + diagnostics (future)
+//
+// Finance Manager dashboard aggregates earnings across all owners.
+// Fleet Manager tracks mileage + maintenance schedules.
+// ─────────────────────────────────────────────────────────────────────────────
 // Vehicle Performance — each card shows a small 1:1 front photo.
 // Clicking "View" opens a modal with full details + live device feed (no page navigation).
 'use client';

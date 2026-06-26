@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// KYC STATUS PAGE — shared by owner + driver
+// ─────────────────────────────────────────────────────────────────────────────
+// Shows: current KYC status (pending / approved / rejected), required documents,
+// option to start or retry verification.
+//
+// Backend integration points:
+//   GET  /api/kyc/status                    → { status, submittedAt, reason? }
+//   POST /api/kyc/start                     → kicks off Smile ID flow
+//   POST /api/webhooks/smile-id             → Smile ID callback, updates status
+//
+// On approval: HR + Fleet admin dashboards must be notified (audit log entry).
+// On rejection: reason returned to user; allow retry.
+// ─────────────────────────────────────────────────────────────────────────────
 // KYC status page
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';

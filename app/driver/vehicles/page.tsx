@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// FIND A CAR PAGE (driver marketplace) — driver only
+// ─────────────────────────────────────────────────────────────────────────────
+// Grid shows available vehicles: front photo (1:1), make/model, location, rates.
+// Click "View Details" → modal with all 4 angles, full specs, damages, problems.
+// Driver can send partnership request from the modal.
+//
+// Backend integration points:
+//   GET  /api/driver/vehicles?available=true     → Vehicle[] with owner info
+//   POST /api/partnerships/request               → driver requests a specific vehicle
+//   Each vehicle has 4 photos (front, side, back, interior) from Supabase Storage.
+//
+// Operations Manager sees all partnership requests in their dashboard.
+// ─────────────────────────────────────────────────────────────────────────────
 // Vehicle listings (Find a Car) — grid shows front view only (1:1) + key details.
 // Clicking "View Details" opens a popup with all views, full specs, damages & problems.
 'use client';

@@ -1,4 +1,17 @@
-// Multi-step signup form for drivers
+// ─────────────────────────────────────────────────────────────────────────────
+// DRIVER SIGNUP PAGE — public route, multi-step form
+// ─────────────────────────────────────────────────────────────────────────────
+// Steps: personal info → license & vehicle preferences → password
+// On submit → currently sets a demo session directly.
+//
+// Backend integration point:
+//   POST /api/auth/signup/driver  { name, email, phone, licenseNumber, ... }
+//   → { token, session }
+//   On success: call setSession(session) → router.push('/driver/onboarding')
+//   Driver must complete onboarding + KYC (Smile ID) before they can browse cars.
+//
+// Animations: FormDeliveryFrame (car drags form down), SectionBackground (drivermatch.png)
+// ─────────────────────────────────────────────────────────────────────────────
 'use client';
 
 import { useState } from 'react';

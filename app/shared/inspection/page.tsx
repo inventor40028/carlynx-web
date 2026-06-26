@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// VEHICLE INSPECTION PAGE — shared by owner + driver
+// ─────────────────────────────────────────────────────────────────────────────
+// Shows: inspection checklist, schedule, status (pending/passed/failed).
+// Types: initial (before partnership), periodic (quarterly), return (end of contract).
+//
+// Backend integration points:
+//   GET  /api/inspections/me                → InspectionRow[] for current user
+//   POST /api/inspections/schedule          → book inspection slot
+//   GET  /api/inspections/:id/checklist     → full checklist JSON
+//   POST /api/inspections/:id/respond       → submit photos/notes for a pending inspection
+//
+// Operations Manager + Fleet Manager admin dashboards see all inspections.
+// ─────────────────────────────────────────────────────────────────────────────
 'use client';
 
 import { useState } from 'react';

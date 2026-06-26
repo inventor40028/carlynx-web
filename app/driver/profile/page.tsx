@@ -1,3 +1,16 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// DRIVER PROFILE PAGE — driver only
+// ─────────────────────────────────────────────────────────────────────────────
+// Edit driver details: name, phone, email, license, vehicle preferences, bio, photo.
+// Displayed to owners when they review driver requests.
+//
+// Backend integration points:
+//   GET  /api/driver/profile                → full driver profile
+//   PUT  /api/driver/profile                → update profile (multipart for photo upload)
+//   Profile photo → Supabase Storage `driver-profiles/`
+//
+// HR Manager + Operations Manager can view all driver profiles from admin dashboards.
+// ─────────────────────────────────────────────────────────────────────────────
 // Driver profile page
 'use client';
 

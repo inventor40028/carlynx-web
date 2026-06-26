@@ -1,3 +1,17 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// DRIVER MARKETPLACE — owner only
+// ─────────────────────────────────────────────────────────────────────────────
+// Browse incoming partnership requests from drivers interested in owner's vehicles.
+// Click "View Profile" → modal with driver photo, license, preferences, KYC status, trust score.
+// Owner can approve/reject from the modal.
+//
+// Backend integration points:
+//   GET  /api/owner/drivers                  → PartnershipRequest[] with driver profiles
+//   PATCH /api/partnerships/:id/approve      → owner accepts request
+//   PATCH /api/partnerships/:id/reject       → owner declines request
+//
+// Operations Manager sees all partnership requests (pending/approved/rejected) in their dashboard.
+// ─────────────────────────────────────────────────────────────────────────────
 // Driver marketplace — owner reviews incoming driver requests.
 // Click "View Profile" to open a modal with the driver's photo + full profile.
 // Approve / Reject live inside the modal.
