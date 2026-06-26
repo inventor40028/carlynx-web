@@ -116,14 +116,6 @@ export default function SignIn() {
             </Button>
           </form>
 
-          <div className="mt-6 p-4 bg-[#eef3f8] rounded-lg">
-            <p className="text-sm font-semibold text-[#0d1b2e] mb-2">Demo Accounts:</p>
-            <p className="text-xs text-[#5b6575]">
-              <strong>Owner:</strong> owner@carlynx.com / owner123<br />
-              <strong>Driver:</strong> driver@carlynx.com / driver123
-            </p>
-          </div>
-
           <div className="mt-6 text-center">
             <p className="text-[#5b6575]">
               Don't have an account?{' '}
